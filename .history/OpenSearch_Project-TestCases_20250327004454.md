@@ -64,8 +64,11 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 |  **Then**  |  | **The OpenSearch container is running. And Running `podman ps` lists `opensearch` as an active container. And Logs should show no critical errors.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](images/image1.png)
+### 
 
+### 
+
+### 
 
 ### **Test Case 2: OpenSearch API Accessibility**
 
@@ -76,7 +79,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  | **The user executes `curl -X GET`** `http://localhost:9200`. |  |  |  |
 | **Then** |  | **The response includes OpenSearch version details.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-![Images](images/image2.png)
+| ![][image1] |  |  |  |  |  |
 
 ### **Test Case 3: Valid Request PUT to Update a Record**
 
@@ -87,8 +90,11 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  | **The user accesses** [`http://localhost:9114/metrics`](http://localhost:9114/metrics). |  |  |  |
 | **Then** |  | **The page displays OpenSearch metrics in Prometheus format.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-![Images](images/image3.png)
+| ![][image2] |  |  |  |  |  |
 
+### 
+
+### 
 
 ### **Test Case 4: Prometheus Integration**
 
@@ -99,10 +105,13 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  | **The user accesses** [`http://localhost:9090/targets`](http://localhost:9090/targets). |  |  |  |
 | **Then** |  | **The target `opensearch-exporter:9114` is in an `UP` state.**  checked  |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-![Images](images/image4.png)
+| ![][image3] |  |  |  |  |  |
 
 ### 
 
+### 
+
+### 
 
 ### **Test Case 5: Grafana Dashboard Configuration**
 
@@ -113,7 +122,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  | **The user configures a dashboard and adds a panel for OpenSearch metrics.** |  |  |  |
 |  **Then** |  | **The graph displays OpenSearch metrics over time.** checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-![Images](images/image5.png)
+| ![][image4] |  |  |  |  |  |
 
 ### **Test Case 6: Create Index in OpenSearch Using Postman**
 
@@ -124,9 +133,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  | **Request: Method: PUT URL: `http://localhost:9200/devansh` Headers: `Content-Type: application/json` Body: {   "settings": {     "index": {       "number\_of\_shards": 1,       "number\_of\_replicas": 1     }   },   "mappings": {     "properties": {       "title": { "type": "text" },       "description": { "type": "text" },       "price": { "type": "float" },       "created\_at": {          "type": "date",         "format": "strict\_date\_optional\_time||epoch\_millis",         "null\_value": "2024-02-05T00:00:00Z"       }     }   } }** |  |  |  |
 | **Then** |  | **Index `devansh` is created successfully. And Verify with GET `http://localhost:9200/_cat/indices`.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-
-![Images](images/image6.png)
-![Images](images/image7.png)
+| **![][image5]  ![][image6]**  |  |  |  |  |  |
 
 ### **Test Case 7:  Insert Document in OpenSearch Using Postman**
 
@@ -137,8 +144,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  | **Request: Method: POST URL: `http://localhost:9200/devansh/_doc` Headers: `Content-Type: application/json`           Body: {   "title": "Devansh1",   "description": "My Name is Devansh",   "price": 200.00 }** |  |  |  |
 | **Then** |  | **Document is inserted successfully.  And Verified with GET `http://localhost:9200/devansh/_search`.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-
-![Images](images/image8.png)
+| ![][image7] |  |  |  |  |  |
 
 ### **Test Case 8: Retrieve Document from OpenSearch Using Postman**
 
@@ -149,7 +155,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  | **Request: Method: GET URL: `http://localhost:9200/devansh/_search`** |  |  |  |
 | **Then** |  | **Inserted documents are returned correctly.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-![Images](images/image9.png)
+| ![][image8] |  |  |  |  |  |
 
 ### 
 
@@ -162,8 +168,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  |  **Find Document ID: Request: GET `http://localhost:9200/devansh/_search` with query: {   "query": {     "match": { "title": "Devansh1" }   } } Extract the `_id` from the response. Update Document: Request: POST URL: `http://localhost:9200/devansh/_update/{document_id}` Body: {   "doc": {     "price": 129.99   } } Verify Update: GET `http://localhost:9200/devansh/_search`.**  |  |  |  |
 | **Then** |  | **Document’s price is updated to `129.99`.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-![Images](images/image10.png)
-
+| ![][image9] |  |  |  |  |  |
 
 ### **Test Case 10: Delete Document from OpenSearch Using Postman**
 
@@ -174,7 +179,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  | **Request: POST URL: `http://localhost:9200/devansh/_delete_by_query` Body: {   "query": {     "match": { "title": "Devanshi" }   } }** |  |  |  |
 | **Then** |  | **Document is deleted successfully. And Verify with GET `http://localhost:9200/devansh/_search` (returns no results).**  Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-![Images](images/image11.png)
+| ![][image10] |  |  |  |  |  |
 
 ### 
 
@@ -187,7 +192,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **When** |  | **The user sequentially performs all CRUD operations from Test Cases 6-10: Creates index (TC6) Inserts 100 documents (TC7) Retrieves documents (TC8) Updates documents (TC9) Deletes documents (TC10)**  |  |  |  |
 | **Then** |  | **The Grafana dashboard displays: Real-time system metrics during each operation phase CPU/Memory usage proportional to operation intensity Successful completion of all operations Return to baseline metrics after operations complete** |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
-![Images](images/image12.png)
+| ![][image11] |  |  |  |  |  |
 
 ## **NFR Test Cases**
 
