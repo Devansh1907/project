@@ -226,49 +226,32 @@ Insert Document
 ```
 POST http://localhost:9200/devansh/_doc
 ```
+| Content-Type: application/json{  "title": "Devansh1",  "description": "My Name is Devansh",  "price": 200.00} |
+| :---- |
 
-```
-Content-Type: application/json
-{
-  "title": "Devansh1",
-  "description": "My Name is Devansh",
-  "price": 200.00
-}
-```
 ### **![][image4]**
 
 Fetch Documents
 
-```
-GET http://localhost:9200/devansh/_search
-```
+| GET http://localhost:9200/devansh/\_search |
+| :---- |
+
 ### **![][image5]**
 
 Search by Title
 
-```
-GET http://localhost:9200/devansh/_search
-{
-  "query": {
-	"match": {
-  	"title": "Devansh1"
-	}
-  }
-}
-```
+| GET http://localhost:9200/devansh/\_search{  "query": {	"match": {  	"title": "Devansh1"	}  }} |
+| :---- |
+
 Update Documents
 
 # 
 
-# **Step 6: Monitoring OpenSearch Performance**
+# **Step 6: Monitoring OpenSearch Performance** {#step-6:-monitoring-opensearch-performance}
 
-```
-Open Prometheus UI at http://localhost:9090
+| Open Prometheus UI at http://localhost:9090Check if Elasticsearch Exporter is upOpen Grafana Dashboard to visualize the OpenSearch performance metrics |
+| :---- |
 
-Check if Elasticsearch Exporter is up
-
-Open Grafana Dashboard to visualize the OpenSearch performance metrics
-```
 **Conclusion**
 
 This implementation successfully integrates OpenSearch with Prometheus and Grafana for monitoring and visualization. The OpenSearch instance allows CRUD operations, which can be tracked in real-time via the Grafana dashboard. This setup provides essential insights into cluster health, resource usage, and query performance, making it a robust solution for search-based applications.

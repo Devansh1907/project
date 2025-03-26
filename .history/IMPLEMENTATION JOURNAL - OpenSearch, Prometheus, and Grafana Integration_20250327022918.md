@@ -169,21 +169,8 @@ scrape_configs:
 # **Step 4: Setting up Grafana**
 
 ```
-Open Grafana at http://localhost:3000
-
-Configure Prometheus as a data source
-
-Import the Elasticsearch Exporter Quickstart and Dashboard JSON file
-
-Dashboard includes:
-
-Cluster Health
-
-CPU and Memory Usage
-
-Disk Usage
-Query & Indexing Time
-
+| Open Grafana at http://localhost:3000Configure Prometheus as a data sourceImport the Elasticsearch Exporter Quickstart and Dashboard JSON fileDashboard includes:Cluster HealthCPU and Memory UsageDisk UsageQuery & Indexing Time |
+| :---- |
 ```
 ### **![][image2]**
 
@@ -191,84 +178,56 @@ Query & Indexing Time
 
 # 
 
-# **Step 5: Performing CRUD Operations on OpenSearch**
+# 
+
+# 
+
+# 
+
+# 
+
+# 
+
+# **Step 5: Performing CRUD Operations on OpenSearch** {#step-5:-performing-crud-operations-on-opensearch}
 
 Create an Index
 
-```
-PUT http://localhost:9200/devansh
-Content-Type: application/json
-{
-  "settings": {
-	"index": {
-  	"number_of_shards": 1,
-  	"number_of_replicas": 1
-	}
-  },
-  "mappings": {
-	"properties": {
-  	"title": { "type": "text" },
-  	"description": { "type": "text" },
-  	"price": { "type": "float" },
-  	"created_at": {
-    	"type": "date",
-    	"format": "strict_date_optional_time||epoch_millis",
-    	"null_value": "2024-02-05T00:00:00Z"
-  	}
-	}
-  }
-}
-```
+| PUT http://localhost:9200/devanshContent-Type: application/json{  "settings": {	"index": {  	"number\_of\_shards": 1,  	"number\_of\_replicas": 1	}  },  "mappings": {	"properties": {  	"title": { "type": "text" },  	"description": { "type": "text" },  	"price": { "type": "float" },  	"created\_at": {    	"type": "date",    	"format": "strict\_date\_optional\_time||epoch\_millis",    	"null\_value": "2024-02-05T00:00:00Z"  	}	}  }} |
+| :---- |
+
 ### **![][image3]**
 
 Insert Document
 
-```
-POST http://localhost:9200/devansh/_doc
-```
+| POST http://localhost:9200/devansh/\_doc |
+| :---- |
 
-```
-Content-Type: application/json
-{
-  "title": "Devansh1",
-  "description": "My Name is Devansh",
-  "price": 200.00
-}
-```
+| Content-Type: application/json{  "title": "Devansh1",  "description": "My Name is Devansh",  "price": 200.00} |
+| :---- |
+
 ### **![][image4]**
 
 Fetch Documents
 
-```
-GET http://localhost:9200/devansh/_search
-```
+| GET http://localhost:9200/devansh/\_search |
+| :---- |
+
 ### **![][image5]**
 
 Search by Title
 
-```
-GET http://localhost:9200/devansh/_search
-{
-  "query": {
-	"match": {
-  	"title": "Devansh1"
-	}
-  }
-}
-```
+| GET http://localhost:9200/devansh/\_search{  "query": {	"match": {  	"title": "Devansh1"	}  }} |
+| :---- |
+
 Update Documents
 
 # 
 
-# **Step 6: Monitoring OpenSearch Performance**
+# **Step 6: Monitoring OpenSearch Performance** {#step-6:-monitoring-opensearch-performance}
 
-```
-Open Prometheus UI at http://localhost:9090
+| Open Prometheus UI at http://localhost:9090Check if Elasticsearch Exporter is upOpen Grafana Dashboard to visualize the OpenSearch performance metrics |
+| :---- |
 
-Check if Elasticsearch Exporter is up
-
-Open Grafana Dashboard to visualize the OpenSearch performance metrics
-```
 **Conclusion**
 
 This implementation successfully integrates OpenSearch with Prometheus and Grafana for monitoring and visualization. The OpenSearch instance allows CRUD operations, which can be tracked in real-time via the Grafana dashboard. This setup provides essential insights into cluster health, resource usage, and query performance, making it a robust solution for search-based applications.

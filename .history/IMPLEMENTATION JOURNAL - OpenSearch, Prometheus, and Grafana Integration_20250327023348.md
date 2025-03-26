@@ -268,7 +268,7 @@ Open Prometheus UI at http://localhost:9090
 Check if Elasticsearch Exporter is up
 
 Open Grafana Dashboard to visualize the OpenSearch performance metrics
-```
+
 **Conclusion**
 
 This implementation successfully integrates OpenSearch with Prometheus and Grafana for monitoring and visualization. The OpenSearch instance allows CRUD operations, which can be tracked in real-time via the Grafana dashboard. This setup provides essential insights into cluster health, resource usage, and query performance, making it a robust solution for search-based applications.
