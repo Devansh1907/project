@@ -62,7 +62,7 @@ The objective of this project is to set up a monitoring stack using OpenSearch, 
 
                           
 
-![Images](Images/image13.png)
+![Images](Images/dev.png)
 
 ### 
 

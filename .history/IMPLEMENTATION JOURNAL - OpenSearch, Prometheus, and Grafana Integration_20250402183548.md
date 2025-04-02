@@ -241,7 +241,7 @@ Fetch Documents
 ```
 GET http://localhost:9200/devansh/_search
 ```
-![Images](Images/image9.png)
+![Images](Images/image8.png)
 
 Search by Title
 
@@ -257,12 +257,7 @@ GET http://localhost:9200/devansh/_search
 ```
 Update Documents
 
-![Images](Images/image10.png)
-
-**Delete**
-
-
-
+# 
 
 # **Step 6: Monitoring OpenSearch Performance**
 

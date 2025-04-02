@@ -143,7 +143,7 @@ e9ea813ad95f  quay.io/prometheuscommunity/elasticsearch-exporter:latest  --es.ur
 
 
 ```
-![Images](Images/image1.png)
+**![][image1]**
 
 # **Step 3: Configuring Prometheus**
 
@@ -163,7 +163,7 @@ scrape_configs:
 	static_configs:
   	- targets: ['opensearch-exporter:9114']
 ```
-![Images](Images/image15.png)
+### **![][image1]**
 
 # **Step 4: Setting up Grafana**
 
@@ -184,7 +184,7 @@ Disk Usage
 Query & Indexing Time
 
 ```
-![Images](Images/images16.png)
+### **![][image2]**
 
 # 
 
@@ -218,7 +218,7 @@ Content-Type: application/json
   }
 }
 ```
-![Images](Images/image6.png)
+### **![][image3]**
 
 Insert Document
 
@@ -234,14 +234,14 @@ Content-Type: application/json
   "price": 200.00
 }
 ```
-![Images](Images/image8.png)
+### **![][image4]**
 
 Fetch Documents
 
 ```
 GET http://localhost:9200/devansh/_search
 ```
-![Images](Images/image9.png)
+### **![][image5]**
 
 Search by Title
 
@@ -257,12 +257,7 @@ GET http://localhost:9200/devansh/_search
 ```
 Update Documents
 
-![Images](Images/image10.png)
-
-**Delete**
-
-
-
+# 
 
 # **Step 6: Monitoring OpenSearch Performance**
 

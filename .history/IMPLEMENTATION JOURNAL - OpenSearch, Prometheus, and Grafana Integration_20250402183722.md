@@ -257,12 +257,7 @@ GET http://localhost:9200/devansh/_search
 ```
 Update Documents
 
-![Images](Images/image10.png)
-
-**Delete**
-
-
-
+# 
 
 # **Step 6: Monitoring OpenSearch Performance**
 
