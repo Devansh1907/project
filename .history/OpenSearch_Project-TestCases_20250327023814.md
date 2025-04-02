@@ -64,7 +64,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 |  **Then**  |  | **The OpenSearch container is running. And Running `podman ps` lists `opensearch` as an active container. And Logs should show no critical errors.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image1.png)
+![Images](images/image1.png)
 
 
 ### **Test Case 2: OpenSearch API Accessibility**
@@ -77,7 +77,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **Then** |  | **The response includes OpenSearch version details.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image2.png)
+![Images](images/image2.png)
 
 ### **Test Case 3: Valid Request PUT to Update a Record**
 
@@ -89,7 +89,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **Then** |  | **The page displays OpenSearch metrics in Prometheus format.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image3.png)
+![Images](images/image3.png)
 
 
 ### **Test Case 4: Prometheus Integration**
@@ -102,7 +102,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **Then** |  | **The target `opensearch-exporter:9114` is in an `UP` state.**  checked  |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image4.png)
+![Images](images/image4.png)
 
 ### 
 
@@ -117,7 +117,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 |  **Then** |  | **The graph displays OpenSearch metrics over time.** checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image5.png)
+![Images](images/image5.png)
 
 ### **Test Case 6: Create Index in OpenSearch Using Postman**
 
@@ -129,8 +129,8 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **Then** |  | **Index `devansh` is created successfully. And Verify with GET `http://localhost:9200/_cat/indices`.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image6.png)
-![Images](Images/image7.png)
+![Images](images/image6.png)
+![Images](images/image7.png)
 
 ### **Test Case 7:  Insert Document in OpenSearch Using Postman**
 
@@ -154,7 +154,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **Then** |  | **Inserted documents are returned correctly.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image9.png)
+![Images](images/image9.png)
 
 ### 
 
@@ -168,7 +168,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **Then** |  | **Document’s price is updated to `129.99`.** Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image10.png)
+![Images](images/image10.png)
 
 
 ### **Test Case 10: Delete Document from OpenSearch Using Postman**
@@ -181,7 +181,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **Then** |  | **Document is deleted successfully. And Verify with GET `http://localhost:9200/devansh/_search` (returns no results).**  Checked |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image11.png)
+![Images](images/image11.png)
 
 ### 
 
@@ -195,7 +195,7 @@ The objective of this project is to set up OpenSearch, Prometheus, and Grafana u
 | **Then** |  | **The Grafana dashboard displays: Real-time system metrics during each operation phase CPU/Memory usage proportional to operation intensity Successful completion of all operations Return to baseline metrics after operations complete** |  |  |  |
 | **Test Run** |  | **Date** |  | **Result** |  |
 
-![Images](Images/image12.png)
+![Images](images/image12.png)
 
 ## **NFR Test Cases**
 
